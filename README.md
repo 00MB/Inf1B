@@ -1,1 +1,1 @@
-# Inf1B
+# Inf1B - Intro to OOP
