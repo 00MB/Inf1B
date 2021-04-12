@@ -2,9 +2,8 @@ package areas;
 
 import java.util.ArrayList;
 
-public class Entrance implements IArea {
-    @Override
-    public ArrayList<Integer> getAdjacentAreas() {
-        return null;
+public class Entrance extends Area {
+    public Entrance() {
+        super(false, new String[]{});
     }
 }

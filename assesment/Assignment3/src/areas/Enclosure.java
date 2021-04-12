@@ -1,10 +1,8 @@
 package areas;
+import animals.*;
 
-import java.util.ArrayList;
-
-public class Enclosure implements IArea {
-    @Override
-    public ArrayList<Integer> getAdjacentAreas() {
-        return null;
+public class Enclosure extends Area {
+    public Enclosure() {
+        super(true, new String[]{"Lion", "Gazelle", "Zebra"});
     }
 }

@@ -5,14 +5,13 @@ import areas.*;
 import dataStructures.ICashCount;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Zoo implements IZoo {
-    HashMap<Integer, Area> areas = new HashMap<Integer, Area>();
-    int uniqueId = 0;
+    HashMap<Integer, IArea> areas = new HashMap<Integer, IArea>();
+    int uniqueId = 1;
 
     public Zoo() {
-        areas.put(0, new Area(new Entrance(), new ArrayList<Animal>()));
+        areas.put(0, new Entrance());
     }
 
     public int getUniqueId() {
@@ -22,8 +21,7 @@ public class Zoo implements IZoo {
     @Override
     public int addArea(IArea area) {
         int id = getUniqueId();
-        ArrayList list = new ArrayList<Integer id, ArrayList<Animal>>();
-        areas.put();
+        areas.put(id, area);
         return id;
     }
 
@@ -39,13 +37,19 @@ public class Zoo implements IZoo {
 
     @Override
     public byte addAnimal(int areaId, Animal animal) {
-        if () {
-
+        Area area = (Area) getArea(areaId);
+        if (!area.isHabitatArea) {
+            return 1;
+        } else if (!area.isHabitat(animal)) {
+            return 2;
+        } else if (area.currentAnimals.size() > area.capacity) {
+            return 3;
+        } else if (!area.isCompatible(animal)) {
+            return 4;
         } else {
-
+            area.currentAnimals.add(animal);
             return 0;
         }
-        return 0;
     }
 
     @Override

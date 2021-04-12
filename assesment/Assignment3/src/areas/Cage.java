@@ -2,9 +2,8 @@ package areas;
 
 import java.util.ArrayList;
 
-public class Cage implements IArea {
-    @Override
-    public ArrayList<Integer> getAdjacentAreas() {
-        return null;
+public class Cage extends Area {
+    public Cage() {
+        super(true, new String[]{"Buzzard", "Parrot"});
     }
 }

@@ -2,9 +2,8 @@ package areas;
 
 import java.util.ArrayList;
 
-public class PicnicArea implements IArea {
-    @Override
-    public ArrayList<Integer> getAdjacentAreas() {
-        return null;
+public class PicnicArea extends Area {
+    public PicnicArea() {
+        super(false, new String[]{});
     }
 }

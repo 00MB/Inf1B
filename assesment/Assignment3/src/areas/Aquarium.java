@@ -1,10 +1,9 @@
 package areas;
 
-import java.util.ArrayList;
+import animals.Animal;
 
-public class Aquarium implements IArea{
-    @Override
-    public ArrayList<Integer> getAdjacentAreas() {
-        return null;
+public class Aquarium extends Area{
+    public Aquarium() {
+        super(true, new String[]{"Seal", "Shark", "Starfish"});
     }
 }
